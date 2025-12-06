@@ -9,13 +9,13 @@ const Header = ({ isLoggedIn, onSignOut }) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    navigate(`/?search=${encodeURIComponent(searchTerm)}`);
+    navigate(`/Merobazar?search=${encodeURIComponent(searchTerm)}`);
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
       <div className="container-fluid px-4">
-        <Link className="navbar-brand fw-bold text-primary" to="/">MeroBazar</Link>
+        <Link className="navbar-brand fw-bold text-primary" to="/Merobazar">MeroBazar</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
         </button>
