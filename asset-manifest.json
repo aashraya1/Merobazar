@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Merobazar/static/css/main.7b6e0968.css",
+    "main.js": "/Merobazar/static/js/main.aed7798e.js",
+    "index.html": "/Merobazar/index.html",
+    "main.7b6e0968.css.map": "/Merobazar/static/css/main.7b6e0968.css.map",
+    "main.aed7798e.js.map": "/Merobazar/static/js/main.aed7798e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b6e0968.css",
+    "static/js/main.aed7798e.js"
+  ]
+}
