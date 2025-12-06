@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import ProductCard from './ProductCard';
 
 const ProductList = () => {
-  const [products, setProducts] = useState([]);  // Original products list
+  const [products, setProducts] = useState([]); 
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -22,8 +22,8 @@ const ProductList = () => {
           image: product.thumbnail,
           description: product.description,
         }));
-        setProducts(mappedProducts);  // Set original products
-        setFilteredProducts(mappedProducts);  // Initially show all
+        setProducts(mappedProducts);  
+        setFilteredProducts(mappedProducts); 
       } catch (err) {
         setError(err.message);
       } finally {
@@ -36,11 +36,11 @@ const ProductList = () => {
   useEffect(() => {
     const query = searchParams.get('search') || '';
     setFilteredProducts(
-      products.filter((product) =>  // Filter from original products
+      products.filter((product) =>  
         product.name.toLowerCase().includes(query.toLowerCase())
       )
     );
-  }, [products, searchParams]);  // Depend on products and searchParams
+  }, [products, searchParams]);  
 
   if (loading) return <div className="container my-5 text-center"><div className="spinner-border text-primary" role="status"><span className="visually-hidden">Loading...</span></div></div>;
   if (error) return <div className="container my-5 text-center text-danger">Error: {error}</div>;
